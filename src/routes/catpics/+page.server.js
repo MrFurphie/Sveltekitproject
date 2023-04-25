@@ -1,5 +1,5 @@
 export async function load({ fetch }) {  
-    const caption = 'Random Shit';
+    const caption = 'Specific Shit';
   
     const url = 'https://cataas.com/cat/says/' + caption + '?json=true';
   

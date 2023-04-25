@@ -1,22 +1,26 @@
 <script>
+  import { add_attribute } from 'svelte/internal';
   export let data;
-  const {catpics} = data;
+  const {catResp} = data;
+  console.log(catResp);
 </script>
-
+<button onclick="window.location.href = '/';" style="height:20px;width=20px">Home</button>
 <article>
-  {#each catpics as { caption }}
-  <figure>
-    <img src="https://cataas.com/cat/says/{caption}" alt="">
-  </figure>
-  {/each}
+  <h2>Here you go!</h2>
+  <a href="/catfacts">Refresh</a>
+  <img src="https://cataas.com/{catResp.url}" alt="">
+  <p>File type: {catResp.mimetype}</p>
+
 </article>
 
 
 <style>
   article {
-    padding: 2em;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 50%;
+    height: auto;
   }
 </style>

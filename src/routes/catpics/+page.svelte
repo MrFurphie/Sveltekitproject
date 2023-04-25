@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>My Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/global.css">
-  <script defer src="/build/bundle.js"></script>
-</head>
-<body>
-  <header>
-    <h1>My Website</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/catpics">Cat Pics</a>
-      <a href="/catfacts">Cat Facts</a>
-    </nav>
-  </header>
-  <main>
-   <!-- <svelte:slot /> -->
-  </main>
-  <footer>
-    <p>&copy; 2023 My Website. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<script>
+  import { add_attribute } from 'svelte/internal';
+  export let data;
+  const {catResp} = data;
+  console.log(catResp);
+</script>
+<button onclick="window.location.href = '/';" style="height:20px;width=20px">Home</button>
+<article>
+  <h2>Here you go!</h2>
+  <img src="https://cataas.com/{catResp.url}" alt="">
+  <p>File type: {catResp.mimetype}</p>
+
+</article>
+
+
+<style>
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 50%;
+    height: auto;
+  }
+</style>
