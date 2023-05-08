@@ -5,6 +5,7 @@
   console.log(catResp);
 </script>
 <button onclick="window.location.href = '/';" style="height:20px;width=20px">Home</button>
+<button onclick="window.location.href = '/factsnegative;'" style="height:20px;width=20px">Negative Filter</button>
 <article>
   <h2>Here you go!</h2>
   <a href="/catfacts">Refresh</a>

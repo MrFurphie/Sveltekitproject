@@ -24,17 +24,6 @@
   <header>
     <h1>My Website</h1>
     <nav>
-      <button on:click={clickHandler}>Menu</button>
-      {#if isExpanded}
-      <ul  transition:slide>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-      {/if}
-    </nav>
-    <nav>
      <ul>
       <li>
         <button onclick="window.location.href = '/catpics';">Cat Pics Saying Specific Shit</button>
